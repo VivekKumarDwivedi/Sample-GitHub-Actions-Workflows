@@ -1,0 +1,14 @@
+name: "multi event pipeline"
+
+on:
+   push:
+    branches:
+        - VD
+        - test
+
+jobs:
+    on-push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on VD push"
+              run: echo "Running on VD push"
